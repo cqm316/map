@@ -1,0 +1,129 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta http-equiv="x-dns-prefetch-control" content="on">
+		<link rel="dns-prefetch" href="//host_name_to_prefetch.com">
+		<link rel="stylesheet" href="../../plugins/layui/css/layui.css" />
+		<link rel="stylesheet" href="../../Styles/main.css" />
+		<link rel="stylesheet" href="../Styles/Admin/quotation.css" />
+	</head>
+
+	<body>
+		
+		<form class="layui-form pay-order" action="">
+			<h3 class="layui-title">确认订单</h3>
+			<div class="quota-main">
+				<p class="quot-title">下单时间: 2017-11-10  15:10</p>
+				<div class="order-bar">
+					<span class="order-status">订单状态: <em>待付款</em></span>
+					<span class="order-sum">订单金额(元): <em>4,665.00</em></span>
+				</div>
+				<div class="layui-form-item">
+		            <label class="layui-form-label">保费详情</label>
+		        </div>
+				<table class="layui-table">
+				  	<thead>
+				  	  	<tr>
+				  	  	 	<th>承保险企</th>
+				  	  	 	<th>投保人</th>
+				  	  	 	<th>险种</th>
+				  	  	 	<th>保费金额(元)</th>
+				  	  	</tr> 
+				  	</thead>
+				 	<tbody>
+				    	<tr>
+				    	  	<td>平安财险</td>
+				    	  	<td>老张</td>
+				    	  	<td>交强险+车船税+商业险</td>
+				    	  	<td>5,567.02</td>
+				    	</tr>
+				 	</tbody>
+				</table>
+
+				<div class="layui-form-item">
+		            <label class="layui-form-label">付款人信息</label>
+		        </div>
+
+		        <div class="layui-form-item pay-man">
+			        <div class="layui-inline">
+			        	<label class="layui-form-label">姓名:</label>
+		        		<div class="layui-input-inline">
+	                		<input class="layui-input" type="text" data-bind="valueUpdate: 'keyup'" placeholder="姓名" name="ticketAddress">
+		                </div>
+	                </div>
+	                <div class="layui-inline">
+		                <label class="layui-form-label">证件类型:</label>
+		                <div class="layui-input-inline">
+	                		<select name="" data-bind="" lay-filter="" lay-search="">
+	                			<option value="">请选择</option> 
+	                			<option value="身份证">身份证</option>
+	                			<option value="机构">机构</option>
+	                			<option value="企业">企业</option>
+	                		</select>
+		                </div>
+	                </div>
+	                <div class="layui-inline">
+		                <label class="layui-form-label">证件号码:</label>
+		                <div class="layui-input-inline">
+	                		<input class="layui-input" type="text" data-bind="valueUpdate: 'keyup'" placeholder="证件号码" name="ticketAddress">
+		                </div>
+	                </div>
+		        </div>
+		        <button data-bind="" class="layui-btn" lay-submit="saveQuota" lay-filter="saveQuota">支付订单</button>
+
+				<!-- <div class="layui-form-item">
+		            <label class="layui-form-label">选择订单付款方式:</label>
+		        </div>
+				<ul class="pay-method fn-clear">
+					<li class="cur"><i class="ico-pay"></i>POS机刷卡</li>
+					<li><i class="ico-pay"></i>微信支付</li>
+					<li><i class="ico-pay"></i>支付宝支付</li>
+					<li><i class="ico-pay"></i>财务处缴费</li>
+				</ul> 
+		        <div class="layui-form-item" pane="">
+		            <label class="layui-form-label">保单获取方式: </label>
+		            <div class="layui-input-block">
+		                <span><input type="radio" data-bind="" name="changedOwner" value="快递寄送" title="快递寄送"></span>
+		                <span data-bind=""><input type="radio" data-bind="" name="changedOwner" value="到店自取" title="到店自取"></span>
+		            </div>
+		        </div>
+		        <blockquote class="layui-elem-quote layui-text">
+				  	<div class="layui-form-item">
+			            <div class="layui-inline">
+			                <div class="layui-input-inline">
+		                		<select name="" data-bind="" lay-filter="" lay-search="">
+		                			<option value="">选择省/市/区/县</option> 
+		                			<option value="中国银行">中国银行</option>
+		                			<option value="建设银行">建设银行</option>
+		                			<option value="浦发银行">浦发银行</option>
+		                		</select>
+			                </div>
+			                <div class="layui-input-inline">
+		                		<input class="layui-input" type="text" data-bind="value: insureInvoice().ticketAddress, attr:{ 'lay-verify': insureInvoice().isVAT() == true ? 'required' : '' }, valueUpdate: 'change'" placeholder="开户地址" name="ticketAddress">
+			                </div>
+			            </div>
+			        </div>
+				</blockquote>-->
+			</div>
+		</form>
+	</body>
+	<script type="text/javascript" src="../../plugins/layui/layui.js"></script>
+	<script type="text/javascript" src="../../Scripts/validator.js"></script>
+	<script type="text/javascript">
+        var applyUrls = {
+        	getOwnerInfoUrl: "../Scripts/json/getOwnerInfo.json",//获取客户信息
+            issueHistoryUrl: "../Scripts/json/issueHistory.json",//出单历史记录
+            modelListUrl: "../Scripts/json/GetVehicleModels.json",//查询车型信息列表
+            carTypeUrl: "", //证件号 车辆类型
+            getinsureTypeUrl: '../Scripts/json/getVehicleRisks.json', // 获取险种
+            bestInsuredUrl: '../Scripts/json/bestInsured.json', // 推荐方案
+            subInsueBillUrl: '../Scripts/json/subInsueBill.json',//提交投保信息
+            getInsCorpsUrl: '../Scripts/json/getInsCorps.json', //获取保险公司
+            getQuotaResultUrl: '../Scripts/json/quotaResult.json', // 获取报价结果
+            subInvoiceFormUrl: '../Scripts/json/subInvoiceForm.json' // 立即核保提交开票信息
+        };
+	</script>
+	<script type="text/javascript" src="../Scripts/Admin/pay.js"></script>
+</html>

@@ -1,0 +1,97 @@
+﻿<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta http-equiv="x-dns-prefetch-control" content="on">
+		<link rel="dns-prefetch" href="//host_name_to_prefetch.com">
+		<link rel="stylesheet" href="../../plugins/layui/css/layui.css" />
+		<link rel="stylesheet" href="../../Styles/main.css" />
+		<link rel="stylesheet" href="../Styles/Admin/quotation.css" />
+	</head>
+	<body>
+		<h3 class="layui-title">新增出单</h3>
+		<div class="quota-main" id="offerForm">
+			<div class="layui-tab layui-tab-brief" lay-filter="docDemoTabBrief">
+			  	<ul class="layui-tab-title tab-index">
+			  	  	<li class="layui-this"><span class="layui-frist">用车牌号快速报价</span></li>
+			  	  	<li>新车/无牌车报价</li>
+			  	</ul>
+			  	<div class="layui-tab-content">
+			  	  	<div class="layui-tab-item layui-show">
+						<form class="quota-form layui-form">
+							<div class="layui-form-item lay-district" lay-verify="">
+					            <div class="layui-inline">
+					                <label class="layui-form-label">投保地区</label>
+					                <div class="layui-input-inline">
+					                	<select name="city" lay-verify="required" lay-filter="province" data-bind="options: areaList, optionsCaption:'请选择', optionsText: 'name',optionsValue: 'code'"></select>
+								    </div>
+								    <div class="layui-input-inline" id="city">
+								        <select lay-filter="city" lay-verify="required" data-bind="options: cityList, optionsCaption:'请选择', optionsText: 'name',optionsValue: 'code',value: city"></select>
+								    </div>
+					            </div>
+					        </div>
+							<div class="layui-form-item">
+					            <div class="layui-inline">
+					                <label class="layui-form-label">车牌号</label>
+					                <div class="layui-input-inline">
+				                		<input class="layui-input uppercase" placeholder="车牌号" type="text" maxlength="8" data-bind="value: plateNo, valueUpdate: 'blur'" name="plateNo" lay-verify="required|plateNo">
+					                </div>
+					            </div>
+					        </div>
+				            <div class="layui-form-item">
+					            <div class="btn-area"><button class="layui-btn" lay-submit="" lay-filter="subQuota">立即报价</button></div>
+					        </div>
+				        </form>
+			  	  	</div>
+			  	  	<div class="layui-tab-item">
+						<form class="quota-form layui-form">
+							<div class="layui-form-item lay-district" lay-verify="">
+					            <div class="layui-inline">
+					                <label class="layui-form-label">投保地区</label>
+								    <div class="layui-input-inline">
+					                	<select name="city" lay-verify="required" lay-filter="province" data-bind="options: areaList, optionsCaption:'请选择', optionsText: 'name',optionsValue: 'code'"></select>
+								    </div>
+								    <div class="layui-input-inline" id="city">
+								        <select lay-filter="city" lay-verify="required" data-bind="options: cityList, optionsCaption:'请选择', optionsText: 'name',optionsValue: 'code',value: city"></select>
+								    </div>
+					            </div>
+					        </div>
+							<div class="layui-form-item">
+					            <div class="layui-inline">
+					                <label class="layui-form-label">车架号:</label>
+					                <div class="layui-input-inline">
+				                		<input class="layui-input uppercase" placeholder="车架号" type="text" data-bind="value: vin, valueUpdate: 'blur'" name="vin" maxlength="17" lay-verify="required|vin">
+					                </div>
+					            </div>
+					        </div>
+							<div class="layui-form-item">
+					            <div class="layui-inline">
+					                <label class="layui-form-label">发动机号:</label>
+					                <div class="layui-input-inline">
+				                		<input class="layui-input uppercase" placeholder="发动机号" type="text" data-bind="value: enginePN, valueUpdate: 'blur'" name="enginePN" maxlength="6" lay-verify="required|enginePN">
+					                </div>
+					            </div>
+					        </div>
+				            <div class="layui-form-item">
+					            <div class="btn-area"><button class="layui-btn" lay-submit="" lay-filter="subNonNumQuota">立即报价</button></div>
+					        </div>
+				        </form>
+			  	  	</div>
+			  	</div>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript" src="../../Scripts/knockout.js"></script>
+	<script type="text/javascript" src="../../plugins/layui/layui.js"></script>
+	<script type="text/javascript">
+		 var applyUrls = {
+            provincesUrl: '../Scripts/json/area.json', // 获取行驶区域
+            quickQuoteUrl: '../Scripts/json/quickQuote.json' // 立即报价
+        };
+        localStorage.removeItem('isInsurancesAdmin');
+	</script>
+
+	<script type="text/javascript" src="../Scripts/Admin/quotaIndex.js"></script>
+</html>

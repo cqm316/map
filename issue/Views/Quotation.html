@@ -1,0 +1,522 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta http-equiv="x-dns-prefetch-control" content="on">
+		<link rel="dns-prefetch" href="//host_name_to_prefetch.com">
+		<link rel="stylesheet" href="../../plugins/layui/css/layui.css" />
+		<link rel="stylesheet" href="../../Styles/main.css" />
+		<link rel="stylesheet" href="../Styles/Admin/quotation.css" />
+		<script type="text/javascript" src="../../plugins/layui/layui.js"></script>
+	</head>
+
+	<body>
+		<div id="insuranceCompany" style="display: none;">
+			<div class="box-insurance-company">
+				<form class="layui-form" action="">
+					<ul class="layui-clear" data-bind="foreach: insCorpsArray">
+						<li>
+							<i class="ico-company" data-bind="css: code"></i>
+							<h3 data-bind="text: shortName"></h3>
+							<input class="selComps" data-bind="attr:{ 'code': code,'shortName':shortName }" type="checkbox" checked="" name="like[read]" lay-skin="primary" title="报价">
+						</li>
+					</ul>
+					<p class="btn-area"><span class="layui-btn" id="sure" lay-submit="sure" lay-filter="sure">&nbsp;确定&nbsp;</span></p>
+				</form>
+			</div>
+		</div>
+
+		<form class="layui-form mod-com" action="" id="Quotation">
+			<div class="mod-quota-head">
+				<h3 class="layui-title">出单详情</h3>
+				<div class="customer-area">
+					<h3 class="quot-title mt15">客户信息</h3>
+					<div class="quot-customer fn-clear">
+						<div class="layui-form-item">
+				            <div class="layui-inline">
+				                <label class="layui-form-label">姓名</label>
+				                <div class="layui-input-inline">
+			                		<input class="layui-input" type="text" data-bind="value: ownerInfo().contact,valueUpdate: 'change'" placeholder="姓名" name="contact" lay-verify="contact">
+				                </div>
+				            </div>
+				        </div>
+				        <div class="layui-form-item">
+				            <div class="layui-inline">
+				                <label class="layui-form-label">电话1</label>
+				                <div class="layui-input-inline">
+			                		<input class="layui-input" id="phone1" type="text" data-bind="value: ownerInfo().phone1,valueUpdate: 'change'" maxlength="11" placeholder="电话1" name="phone1" lay-verify="phone">
+				                </div>
+				            </div>
+				        </div>
+				        <div class="layui-form-item">
+				            <div class="layui-inline">
+				                <label class="layui-form-label">电话2</label>
+				                <div class="layui-input-inline">
+			                		<input class="layui-input" id="phone2" type="text" data-bind="value: ownerInfo().phone2,valueUpdate: 'change'" maxlength="11" placeholder="电话2" name="phone2" lay-verify="phone">
+				                </div>
+				            </div>
+				        </div>
+				        <div class="layui-form-item">
+				            <div class="layui-inline">
+				                <label class="layui-form-label">电子邮箱</label>
+				                <div class="layui-input-inline">
+			                		<input class="layui-input" type="text" data-bind="value: ownerInfo().email,valueUpdate: 'change'" placeholder="电子邮箱" name="email" lay-verify="">
+				                </div>
+				            </div>
+				        </div>
+					</div>
+				</div>
+			</div>
+			<div class="quota-main fn-clear">
+				<div class="com-quote fn-clear">
+					<div class="mod-ownerVehicle-left layui-side-scroll" lay-filter="side">
+						<div class="scrollDiv"></div>
+						<div id="left-column">
+							<i id="vehicle-side-down" class="ico-down ico">&lt;&lt;</i>
+							<div class="mod-ownerVehicle" style="height:1000px" id="vehicle">
+								<div class="quotAdmin">
+								    <div class="quot-inner">
+								        <div class="layui-form-item">
+								            <div class="layui-inline">
+								                <label class="layui-form-label">投保城市</label>
+								                <div class="layui-input-inline">
+							                		<span class="dat-text" data-bind="text: ownerVehicle().drivingArea"></span>
+								                </div>
+								            </div>
+								        </div>
+
+								        <h3 class="quot-title">投保车辆详情</h3>
+							            <div class="layui-form-item">
+								            <div class="layui-inline">
+								                <label class="layui-form-label">车主名</label>
+								                <div class="layui-input-inline">
+							                		<input class="layui-input" type="text" data-bind="value: ownerVehicle().carOwnerName,valueUpdate: 'change'" placeholder="车主名" name="carOwnerName" lay-verify="carOwnerName">
+								                </div>
+								            </div>
+								        </div>
+
+								        <div class="layui-form-item">
+								            <div class="layui-inline">
+								                <label class="layui-form-label">车主证件号</label>
+								                <div class="layui-input-inline">
+							                		<input class="layui-input" type="text" id="idCard" maxlength="18" data-bind="value: ownerVehicle().carOwnerIDNo,valueUpdate: 'keyup'" placeholder="车主证件号" name="carOwnerIDNo" lay-verify="idcard">
+							                		<span class="validationMessage"></span>
+								                </div>
+								            </div>
+								        </div>
+
+								        <div class="layui-form-item">
+								            <div class="layui-inline i-relationPeopleType" data-type="car">
+								                <label class="layui-form-label">所属性质</label>
+								                <div class="layui-input-inline">
+							                		<select name="city" id="carOwnerType" lay-verify="carOwnerType" lay-filter="carOwnerType" data-bind="value: ownerVehicle().carOwnerType">
+							                			<option value="Other">请选择</option> 
+							                			<option value="Person">个人</option>
+							                			<option value="Enterprise">企业</option>
+							                			<option value="Organ">机关</option>
+							                		</select>
+								                </div>
+								            </div>
+								        </div>
+										<div class="layui-form-item">
+								            <div class="layui-inline plateNo-area">
+								                <label class="layui-form-label">车牌号</label>
+								                <div class="layui-input-inline">
+							                		<input class="layui-input ipt-plateNo" type="text" id="plateNo" maxlength="8" data-bind="value: ownerVehicle().plateNo, attr: { 'disabled': isNonPlateNo() }, valueUpdate: 'change'" placeholder="车牌号" name="plateNo" lay-verify="plateNo">
+							                		<span data-bind="click: checkIsPlateNo"><input type="checkbox" name="" data-bind="attr:{ 'checked': isNonPlateNo() }" lay-skin="primary" title="未上牌"></span>
+								                </div>
+								            </div>
+								        </div>
+								        <div class="layui-form-item">
+								            <div class="layui-inline">
+								                <label class="layui-form-label">车架号</label>
+								                <div class="layui-input-inline">
+							                		<input class="layui-input" type="text" id="vin" maxlength="17" data-bind="value: ownerVehicle().vin,valueUpdate: 'change'" placeholder="车架号字符较长 请仔细核对" name="vin" lay-verify="vin">
+								                </div>
+								            </div>
+								        </div>
+								        <div class="layui-form-item">
+								            <div class="layui-inline">
+								                <label class="layui-form-label">发动机号</label>
+								                <div class="layui-input-inline">
+							                		<input class="layui-input" type="text" id="engineNo" data-bind="value: ownerVehicle().engineNo,valueUpdate: 'change'" placeholder="输入发动机号" name="engineNo" lay-verify="engineNo">
+								                </div>
+								            </div>
+								        </div>
+										<div class="layui-form-item">
+								            <div class="layui-inline">
+								                <label class="layui-form-label">品牌型号</label>
+								                <div class="layui-input-inline">
+							                		<textarea class="layui-textarea textaModel" type="text" id="model" data-bind="value: ownerVehicle().model,valueUpdate: 'blur'" placeholder="字母区分大小写" name="model" lay-verify="model"></textarea>
+								                </div>
+								            </div>
+								        </div>
+								        <div class="layui-form-item">
+								            <div class="layui-inline">
+								                <label class="layui-form-label">车型 / 价格</label>
+								                <div class="layui-input-inline">
+								                	<textarea placeholder="请选择车型价格" data-bind="value: ownerVehicle().fullPriceModel,valueUpdate: 'blur'" lay-verify="fullPriceModel" class="layui-textarea textaModel"></textarea>
+								                	<div class="model-show">
+							                            <button class="layui-btn layui-btn-primary" id="checkModel" data-bind="click: showModelList">查询车型/价格</button>
+
+							                            <p class="validationMessage" data-bind="visible: shouldModleErrTip, text: modleErrTipTxt"></p>
+														
+							                            <div class="illustration" style="display: none;">
+							                                <div class="layui-form">
+								                                <table class="layui-table" cellpadding="0" cellspacing="0">
+								                                    <thead>
+								                                        <tr>
+								                                            <th>品牌</th>
+								                                            <th>参考价</th>
+								                                        </tr>
+								                                    </thead>
+								                                    <tr data-bind="visible: shouldShowNonData"><td colspan="4"><div class="com-empty"><i class="i-nodata"></i><span>抱歉，没有识别出您的车型，请核对一下车架号，再次尝试一下!</span></div></td></tr>
+								                                    <tbody data-bind="foreach: modelDataList,visible: shouldShowModelList">
+								                                        <tr class="J-m-list" data-bind="attr:{'data-brandName': brandName ,'data-model': model ,'data-makerModel': makerModel ,'data-purchasePrice': purchasePrice ,'data-passengerCapacity': passengerCapacity
+								                                        ,'data-fullPriceModel':fullPriceModel }">
+								                                            <td data-bind="text: model"></td>
+								                                            <td data-bind="text: purchasePrice"></td>
+								                                        </tr>
+								                                    </tbody>
+								                                </table>
+							                                </div>
+							                            </div>
+							                        </div>
+								                </div>
+								            </div>
+								        </div>
+								        <div class="layui-form-item site-demo-button">
+								            <div class="layui-inline">
+								                <label class="layui-form-label">座位数</label>
+								                <div class="layui-input-inline">
+								                	<input id="seat" class="layui-input seatsCount" readonly="readonly" type="button" data-bind="value: ownerVehicle().passengerCapacity,valueUpdate: 'blur'" lay-verify="passengerCapacity" placeholder="座位数">
+								                </div>
+								            </div>
+								        </div>
+								        <div class="layui-form-item">
+								            <div class="layui-inline">
+								                <label class="layui-form-label">注册日期</label>
+								                <div class="layui-input-inline">
+							                		<input type="text" name="registerDate" id="registerDate" autocomplete="off" class="layui-input" data-bind="value: ownerVehicle().registerDate(),valueUpdate: 'blur'" onclick="layui.laydate({elem: this,max: laydate.now(+1)})" lay-verify="registerDate" placeholder="车辆注册登记时间">
+								                </div>
+								            </div>
+								        </div>
+								        <div class="layui-form-item" pane="">
+								            <label class="layui-form-label">是否过户车</label>
+								            <div class="layui-input-block">
+								                <span data-bind="click: checkYesTransfer"><input type="radio" data-bind="attr:{ 'checked': ownerVehicle().changedOwner() }" name="changedOwner" value="是" title="是"></span>
+								                <span data-bind="click: checkNoTransfer"><input type="radio" data-bind="attr:{ 'checked': !ownerVehicle().changedOwner() }" name="changedOwner" value="否" title="否"></span>
+								            </div>
+								        </div>
+										<div class="layui-form-item" data-bind="visible: shouldShowTransfer">
+								            <div class="layui-inline">
+								                <label class="layui-form-label">过户日期</label>
+								                <div class="layui-input-inline">
+							                		<input type="text" name="changedOwnerDate" id="changedOwnerDate" autocomplete="off" class="layui-input" data-bind="value: ownerVehicle().changedOwnerDate,valueUpdate: 'blur'" lay-verify="changedOwnerDate" onclick="layui.laydate({elem: this,max: laydate.now(+1)})" placeholder="请填写过户时间">
+								                </div>
+								            </div>
+								        </div>
+										<h3 class="quot-title ins-title">投保人</h3>
+										<div class="layui-form-item" pane="">
+								            <div class="layui-form-label lab">
+								                <span data-bind="click: shouldApplicantForm"><input id="applicant" type="checkbox" name="" data-bind="attr:{ 'checked': isHasInsureInfo() }" lay-skin="primary" title="同车主"></span>
+								            </div>
+								        </div>
+
+										<div class="insured-area" style="display: none;" data-bind="visible: shouldShowApplicant">
+									        <div class="layui-form-item">
+									            <div class="layui-inline">
+									                <label class="layui-form-label">姓名</label>
+									                <div class="layui-input-inline">
+								                		<input class="layui-input" type="text" data-bind="value: applicant().name,valueUpdate: 'blur'" placeholder="请输入投保人姓名" lay-verify="aName">
+									                </div>
+									            </div>
+									        </div>
+									        <div class="layui-form-item">
+									            <div class="layui-inline">
+									                <label class="layui-form-label">证件号</label>
+									                <div class="layui-input-inline">
+								                		<input class="layui-input ownerIdCard" type="text" data-bind="value: applicant().idNo,valueUpdate: 'blur'" placeholder="输入证件号" name="idNo" id="insureIdCard" lay-verify="idcard">
+								                		<span class="validationMessage"></span>
+									                </div>
+									            </div>
+									        </div>
+									        <div class="layui-form-item">
+									            <div class="layui-inline i-relationPeopleType" data-type="insure">
+									                <label class="layui-form-label">所属性质</label>
+									                <div class="layui-input-inline">
+								                		<select name="city" lay-verify="aType" lay-filter="aType" data-bind="value: applicant().type">
+								                			<option value="Other">请选择</option> 
+								                			<option value="Person">个人</option>
+								                			<option value="Enterprise">企业</option>
+								                			<option value="Organ">机关</option>
+								                		</select>
+									                </div>
+									            </div>
+									        </div>
+											<div class="layui-form-item">
+									            <div class="layui-inline">
+									                <label class="layui-form-label">手机号</label>
+									                <div class="layui-input-inline">
+								                		<input class="layui-input" type="text" data-bind="value: applicant().phone,valueUpdate: 'blur'" maxlength="11" placeholder="输入投保人手机号" lay-verify="aPhone">
+									                </div>
+									            </div>
+									        </div>
+								        </div>
+										
+										<h3 class="quot-title ins-title">被保人</h3>
+
+										<div class="layui-form-item" pane="">
+								            <div class="layui-form-label lab">
+								                <span data-bind="click: shouldInsuredForm"><input id="insured" type="checkbox" name="" data-bind="attr:{ 'checked': isHasInsuredData() }" lay-skin="primary" title="同车主"></span>
+								            </div>
+								        </div>
+										<div class="insured-area" style="display: none;" data-bind="visible: shouldShowInsured">
+									        <div class="layui-form-item">
+									            <div class="layui-inline">
+									                <label class="layui-form-label">姓名</label>
+									                <div class="layui-input-inline">
+								                		<input class="layui-input" type="text" data-bind="value: insured().name,valueUpdate: 'blur'" placeholder="请输入投保人姓名" lay-verify="bName">
+									                </div>
+									            </div>
+									        </div>
+									        <div class="layui-form-item">
+									            <div class="layui-inline">
+									                <label class="layui-form-label">证件号</label>
+									                <div class="layui-input-inline">
+								                		<input class="layui-input ownerIdCard" type="text" data-bind="value: insured().idNo,valueUpdate: 'blur'" placeholder="输入证件号" name="idNo" id="insuredIdCard" lay-verify="idcard">
+								                		<span class="validationMessage"></span>
+									                </div>
+									            </div>
+									        </div>
+									        <div class="layui-form-item">
+									            <div class="layui-inline i-relationPeopleType" data-type="insured">
+									                <label class="layui-form-label">所属性质</label>
+									                <div class="layui-input-inline">
+								                		<select name="city" lay-verify="bType" lay-filter="bType" data-bind="value: insured().type">
+								                			<option value="Other">请选择</option> 
+								                			<option value="Person">个人</option>
+								                			<option value="Enterprise">企业</option>
+								                			<option value="Organ">机关</option>
+								                		</select>
+									                </div>
+									            </div>
+									        </div>
+											<div class="layui-form-item">
+									            <div class="layui-inline">
+									                <label class="layui-form-label">手机号</label>
+									                <div class="layui-input-inline">
+								                		<input class="layui-input" type="text" data-bind="value: insured().phone,valueUpdate: 'blur'" maxlength="11" placeholder="输入投保人手机号" lay-verify="bPhone">
+									                </div>
+									            </div>
+									        </div>
+								        </div>
+							            <input name="makerModel" data-bind="value: ownerVehicle().makerModel" type="hidden" placeholder="精友车型型号">
+							            <input name="purchasePrice" id="purchasePrice" data-bind="value: ownerVehicle().purchasePrice" type="hidden" placeholder="购买">
+							            <input name="analogyCarPrice" id="analogyCarPrice" data-bind="value: ownerVehicle().analogyCarPrice" type="hidden" placeholder="类价比">
+							            <input name="vehicelModelCode" id="vehicelModelCode" data-bind="value: ownerVehicle().vehicelModelCode" type="hidden" placeholder="车型编码">
+							            <input name="year" data-bind="value: ownerVehicle().year" type="hidden" placeholder="发证时间">
+								    </div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="mod-quote-right">
+						<div class="open" id="vehicle-side-open"><i class="ico">&gt;&gt;</i><p class="mt15">投<br>保<br>基<br>本<br>信<br>息</p></div>
+						<div id="modCom">
+							<div class="quotAdmin quota-main" data-bind="visible: shouldShowInsurance" id="Insurances">
+				                <h3 class="quota-hd fn-clear">
+				                	<em>选择车险方案</em>
+				                </h3>
+							    <div class="container insurance">
+						            <div class="layui-form-item">
+						            	<div class="layui-inline item-custom-width">
+			  								<input type="checkbox" name="insurance[jq]" lay-skin="primary" title="交强险/车船税" id="jqtype">
+									    </div>
+						                <div class="layui-inline">
+									      	<label class="layui-form-label  label-custom-width">交强险起保日期</label>
+									      	<div class="layui-input-inline">
+									        	<input type="text" name="jqTime" id="jqTime" placeholder="请选择" autocomplete="off" class="layui-input" onclick="layui.laydate({elem: this, min: laydate.now(+1)})"  data-bind="value: jqTime,valueUpdate: 'blur'" lay-verify="jqTime" />
+									      	</div>
+									    </div>
+									</div>
+									<div class="layui-form-item">
+						            	<div class="layui-inline item-custom-width">
+			  								<input type="checkbox" name="insurance[sy]" lay-skin="primary" lay-verify="sychecked" title="商业险"  id="sytype">
+									    </div>
+						                <div class="layui-inline">
+									      	<label class="layui-form-label label-custom-width">商业险起保日期</label>
+									      	<div class="layui-input-inline">
+									        	<input type="text" name="syTime" id="syTime" lay-verify="syTime" placeholder="请选择" autocomplete="off" class="layui-input" onclick="layui.laydate({elem: this,min: laydate.now(+1)})" data-bind="value: syTime,valueUpdate: 'blur'">
+									      	</div>
+									    </div>
+									</div>
+
+									<div class="layui-form">
+										<table  class="layui-table" lay-skin="line">
+										    <colgroup>
+											    <col width="250">
+											    <col>
+										    </colgroup>
+										    <thead>
+											    <tr>
+											        <td>保险项目</td>
+						                            <td><span>保额</span></td>
+											    </tr>
+										    </thead>
+										    <tbody id="insListing" class="com-insurances-list" data-bind="foreach: listArray">
+										     	<tr data-bind="attr: {value: code,'id': code}">
+											        <td>
+												        <div class="layui-inline item-custom-width">
+							  								<input type="checkbox" name="Deductible[0]" lay-skin="primary" class="insureInput" data-bind="attr: { title: name }">
+													    </div>
+													</td>
+											        <td>
+											        	<div class="layui-inline item-custom-width">
+							  								<input type="checkbox" name="Deductible[1]" lay-skin="primary" title="不计免赔" class="insureCheck" >
+													    </div>
+													    <div class="layui-inline" data-bind="if: optionCoverages.length != 0">
+															<div class="layui-input-inline">
+																<div data-bind="if:code == 'SZX'|| code == 'SJZRX'||code == 'CKZRX'">
+																	<select lay-verify="sumInsured" name="extraRiskCode" data-bind="options: $root.look(optionCoverages), optionsCaption:'请选择',optionsText:$root.look(optionCoverages),value:'optionCoverages'" class="insureSelect" lay-search=""></select>
+																</div>
+															    <div data-bind="if: code != 'SZX' && code != 'SJZRX' && code != 'CKZRX'">
+															    	<select lay-verify="sumInsured" name="extraRiskCode" data-bind="options: $root.look(optionCoverages), optionsCaption:'请选择',optionsText:$root.look(optionCoverages),value:'optionCoverages'" class="insureSelect"></select>
+															    </div>
+															</div>
+													    </div>
+				                                    </td>
+										     	</tr>
+										    </tbody>
+										</table>
+									</div>
+							    </div>
+							</div>
+							<div class="quotAdmin" data-bind="visible: shouldShowResult" id="quotaResult" style="display: none;">
+								<div class="quotation-result quota-main" id="quotationResult">
+									<div class="result-bar" style="display: none;" data-bind="visible: indangerQuantity() != ''">
+										<span>上年出险次数：<em data-bind="text: indangerQuantity">2</em>次</span>
+										<a href="#">详情</a>
+									</div>
+								    <h3 class="result-title">报价详情</h3>
+								    <div class="result-field" style="display: none;" data-bind="visible: bzBeginDate() != '' || bsBeginDate() != ''">
+										<p>交强险生效日期: <em data-bind="text: bzBeginDate"></em> 至 <em data-bind="text: bzEndDate"></em></p>
+										<p>商业险生效日期: <em data-bind="text: bsBeginDate"></em> 至 <em data-bind="text: bsEndDate"></em></p>
+									</div>
+									<div class="layui-tab layui-tab-card" lay-filter="test">
+									  	<ul class="layui-tab-title tab-title-custom" id="resultDetail" data-bind="foreach: resultDetail">
+										    <li data-bind="attr:{'code': code },click: $parent.tabChanged" >
+										    	<dl class="layui-clear">
+										    		<dt class="ico-company" data-bind="css: code"></dt>
+										    		<dd>
+										    			<i data-bind="visible: status == 'uSuccess'" class="ico-status suc"></i>
+										    			<i data-bind="visible: isRenewal == true" class="ico-status"></i>
+										    			<em data-bind="text: shortName"></em>
+										    			<p style="display: none;" data-bind="visible: details != ''"><span data-bind="text: !$data.details? '':$data.details.premium ? details.premium : ''"></span></p>
+										    			<p data-bind="visible: status == 'loading'"><i class="i-loading"></i>报价中</p>
+										    			<p data-bind="visible: status == 'qFailed' || status == 'uFailed'"><i class="i-fail"></i><em data-bind="text: status == 'qFailed' ? '报价':'核保'"></em>失败</p>
+										    		</dd>
+										    	</dl>
+										    </li>
+									    </ul>
+									    <div class="layui-tab-content" id="resultContent" data-bind="with: itemDetails">
+										    <div class="layui-tab-item">
+										    	<div data-bind="visible: status == 'loading'" class="loading-result">
+										    		<img src="../Content/a-loading.gif" />
+													<span>正在报价，请稍候</span>
+										    	</div>
+										    	<div class="fail-result" style="display: none;" data-bind="visible: status == 'qFailed' || status == 'uFailed'">
+													<h3><i class="i-fail"></i><em data-bind="text: status == 'qFailed' ? '报价':'核保'"></em>失败原因</h3>
+													<p data-bind="text: details.remark ? details.remark : '母鸡呀'"></p>
+										    	</div>
+										    	<h3>状态：<em data-bind="text: statusDisplay"></em></h3>
+										    	<div class="success-result" data-bind="visible: status == 'qSuccess' || status == 'uSuccess'">
+										    		<ul class="layui-text">
+										    			<li>无赔款优惠系数: <em data-bind="text: details.coefficient ? details.coefficient.wpkyhxs : '--'"></em> | 自主渠道系数: <em data-bind="text: details.coefficient ? details.coefficient.zzqdxs : '--'"></em> | 自主核保系数: <em data-bind="text: details.coefficient ? details.coefficient.zzhbxs : '--'"></em> | 交通违法浮动系数: <em data-bind="text: details.coefficient ? details.coefficient.jtwffdxs : '--'"></em> | 折扣系数: <em data-bind="text: details.coefficient ? details.coefficient.zksx : '--'"></em> </li>
+											      		<li><span>商业险投保单号: <em data-bind="text: details.bInsureNo ? details.bInsureNo : '--'"></em></span> | <span>交强险投保单号: <em data-bind="text: details.bzInsureNo ? details.bzInsureNo : '--'"></em></span></li>
+										    		</ul>
+										    		<h3 class="quota-hd fn-clear"><em>投保车型</em></h3>
+													<blockquote class="layui-elem-quote layui-quote-nm">LDD1016BJX/北京现代BH7161HAZ轿车/北京现代/5座/手自一体 GS时尚型 京5国Ⅳ (节能补贴)/2012/103300/朗动1.6L AT GS时尚型</blockquote>
+													<h3 class="quota-hd fn-clear"><em>报价明细</em></h3>
+													<table class="layui-table">
+													  	<colgroup>
+														    <col width="150">
+														    <col width="200">
+													    	<col>
+													  	</colgroup>
+													  	<thead>
+														    <tr> <th>险种</th> <th>保额(元)</th> <th>保费(元)</th> </tr> 
+													    </thead>
+												    	<tr class="d-head">
+													    	<td>交强险保费</td>
+													      	<td></td>
+													      	<td data-bind="text: details.bzPremium ? details.bzPremium : '--'"></td>
+													    </tr>
+													    <tr class="d-head">
+													      	<td>车船税</td>
+													      	<td></td>
+													      	<td data-bind="text: details.tax ? details.tax : '--'"></td>
+													    </tr>
+													    <tr class="d-head">
+													      	<td>商业险保费小计</td>
+													      	<td></td>
+													      	<td data-bind="text: details.bsPremium ? details.bsPremium : '--'"></td>
+													    </tr>
+														<tbody data-bind="foreach: details.insuredRiskKinds">
+														    <tr>
+														      	<td data-bind="text: riskKindItem"></td>
+														      	<td data-bind="text: coverage"></td>
+														      	<td data-bind="text: premium"></td>
+														    </tr>
+														</tbody>
+													</table>
+												</div>
+										    </div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="btn-footer" style="display: none;" data-bind="visible: shouldShowBtnArea">
+					<div data-bind="visible: toQuotaBtn">
+						<button class="layui-btn layui-btn-primary" data-bind="click: subQuota" lay-submit="save" lay-filter="save">保存</button>
+						<button class="layui-btn" data-bind="click: toQuote" lay-submit="toQuote" lay-filter="toQuote">立即报价</button>
+					</div>
+					<div data-bind="visible: !toQuotaBtn()" style="display: none;">
+						<span class="layui-btn layui-btn-primary" data-bind="click: modifyQuota">修改方案</span>
+						<em data-bind="with: itemDetails">
+							<span class="layui-btn" data-bind="visible: status == 'qSuccess', click: $parent.showInsureLayer">核保</span>
+							<span class="layui-btn layui-btn-danger" data-bind="visible: status == 'uSuccess', click: $parent.showOfferList">付款</span>
+						</em>
+					</div>
+				</div>
+			</div>
+		</form>
+	</body>
+
+	<script type="text/javascript" src="../../Scripts/knockout.js"></script>
+	<script type="text/javascript" src="../../Scripts/knockout.mapping.js"></script>
+	<script type="text/javascript" src="../../Scripts/knockout.validation.js"></script>
+	<script type="text/javascript" src="../../plugins/layui/layui.js"></script>
+	<script type="text/javascript" src="../../Scripts/validator.js"></script>
+	<script type="text/javascript">
+        var applyUrls = {
+        	getOwnerInfoUrl: "../Scripts/json/getOwnerInfo.json",//获取客户信息
+            issueHistoryUrl: "../Scripts/json/issueHistory.json",//出单历史记录
+            modelListUrl: "../Scripts/json/GetVehicleModels.json",//查询车型信息列表
+            carTypeUrl: "", //证件号 车辆类型
+            getinsureTypeUrl: '../Scripts/json/getVehicleRisks.json', // 获取险种
+            bestInsuredUrl: '../Scripts/json/bestInsured.json', // 推荐方案
+            subInsueBillUrl: '../Scripts/json/subInsueBill.json',//提交投保信息
+            getInsCorpsUrl: '../Scripts/json/getInsCorps.json', //获取保险公司
+            getQuotaResultUrl: '../Scripts/json/quotaResult.json', // 获取报价结果
+            subInvoiceFormUrl: '../Scripts/json/subInvoiceForm.json', // 立即核保提交开票信息
+            calculatedPrices: '../Scripts/json/subInvoiceForm.json', //展示可以报价的公司
+            getInsureResultUrl: '../Scripts/json/insureResult.json' // 获取核保结果
+        };
+	</script>
+	<script type="text/javascript" src="../Scripts/Admin/quotation.js"></script>
+</html>

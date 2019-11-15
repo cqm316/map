@@ -1,0 +1,187 @@
+{
+  "result": [
+    {
+      "code": "JDCJTSGZRQZBX",
+      "name": "机动车交通事故责任强制保险",
+      "sort": 1,
+      "insKindRisks": [
+        {
+          "code": "JQX",
+          "name": "机动车交通事故责任强制险",
+          "shortName": "交强险",
+          "description": "国家法规强制要求，每位车主必须投保的险种在交通事故中造成受害人（不包括本车人员和被保险人）的人身伤亡、财产损失，在责任限额内予以保障性的赔偿一般情况下赔偿最高限额为12.2万元，交强险赔偿额度有限，所以商业险补充是非常必要。",
+          "optionCoverages": [],
+          "isMainRiskInsured": true,
+          "sort": 0,
+          "id": 1
+        }
+      ],
+      "id": 1
+    },
+    {
+      "code": "JDCZHSYBX",
+      "name": "机动车综合商业保险",
+      "sort": 0,
+      "insKindRisks": [
+        {
+          "code": "CSX",
+          "name": "机动车损失保险",
+          "shortName": "车损险",
+          "description": "车辆损失险是负责赔偿由于自然灾害和意外事故造成投保车辆本身的损失。它是车辆保险中用途最广泛的险种。无论是小剐小蹭，还是损坏严重，都可以由保险公司来支付修理费用，对于维护车主的利益具有重要作用，建议足额投保。",
+          "extraRiskInsuredCode": true,
+          "optionCoverages": [],
+          "isMainRiskInsured": true,
+          "sort": 99,
+          "id": 2
+        },
+        {
+          "code": "SZX",
+          "name": "第三者责任保险",
+          "shortName": "三者险",
+          "description": "指合格驾驶员在使用被保险车辆过程中发生意外事故而造成第三者的财产直接损失与人员伤亡的。",
+          "extraRiskInsuredCode": true,
+          "optionCoverages": [
+            "50000",
+            "100000",
+            "150000",
+            "200000",
+            "300000",
+            "500000",
+            "1000000",
+            "1500000",
+            "2000000"
+          ],
+          "isMainRiskInsured": true,
+          "sort": 98,
+          "id": 3
+        },
+        {
+          "code": "SJZRX",
+          "name": "车上人员责任保险(司机)",
+          "shortName": "司机责任险",
+          "description": "车上人员责任险负责赔偿保险车辆发生意外事故，导致车上的司机伤亡造成的费用损失，以及为减少损失而支付的必要合理的施救、保护费用。",
+          "extraRiskInsuredCode": true,
+          "optionCoverages": [
+            "10000",
+            "20000",
+            "30000",
+            "50000",
+            "100000"
+          ],
+          "isMainRiskInsured": true,
+          "sort": 97,
+          "id": 4
+        },
+        {
+          "code": "CKZRX",
+          "name": "车上人员责任保险(乘客)",
+          "shortName": "乘客责任险",
+          "description": "车上人员责任险负责赔偿保险车辆发生意外事故，导致车上的乘客人员伤亡造成的费用损失，以及为减少损失而支付的必要合理的施救、保护费用。",
+          "extraRiskInsuredCode": true,
+          "optionCoverages": [
+            "10000",
+            "20000",
+            "30000",
+            "50000",
+            "100000"
+          ],
+          "isMainRiskInsured": true,
+          "sort": 96,
+          "id": 5
+        },
+        {
+          "code": "DQX",
+          "name": "全车盗抢保险",
+          "shortName": "盗抢险",
+          "description": "全车被盗窃、被抢夺，经县级以上公安刑侦部门立案核实，满60天未查明下落的，保险公司负责赔偿保险车辆全车被盗窃、被抢夺后受到损坏或车上零部件、附属设备丢失需要修复的合理费用。",
+          "extraRiskInsuredCode": true,
+          "optionCoverages": [],
+          "isMainRiskInsured": true,
+          "sort": 95,
+          "id": 6
+        },
+        {
+          "code": "BLX",
+          "name": "玻璃单独破碎险",
+          "shortName": "玻璃险",
+          "description": "指使用过程中发生本车玻璃单独破碎，注意“单独”两字，而如是其他事故引起的，车损险里有赔。",
+          "extraRiskInsuredCode":false,
+          "optionCoverages": [
+            "国产",
+            "进口"
+          ],
+          "isMainRiskInsured": false,
+          "mainRiskInsuredCode": "CSX",
+          "sort": 94,
+          "id": 7
+        },
+        {
+          "code": "ZRX",
+          "name": "自燃损失险",
+          "shortName": "自燃险",
+          "description": "车辆在行驶过程中，因本车电器、线路、供油系统发生故障及载运货物自燃原因起火燃烧，造成车辆损失以及施救所支付的合理费用。是新车建议不买，三年以上的车建议考虑。",
+          "extraRiskInsuredCode": true,
+          "optionCoverages": [],
+          "isMainRiskInsured": false,
+          "mainRiskInsuredCode": "CSX",
+          "sort": 93,
+          "id": 8
+        },
+        {
+          "code": "HHX",
+          "name": "车身划痕损失险",
+          "shortName": "划痕险",
+          "description": "在使用过程中，被他人剐划(无明显碰撞痕迹)需要修复的费用，一般新车、新手买。10万的车可以买5千档次的划痕就够了。现在社会报复心理的人很多，你的车随时都可能被停在路边被划。保费一般在300-500元左右。",
+          "extraRiskInsuredCode": true,
+          "optionCoverages": [
+            "2000",
+            "5000",
+            "10000",
+            "20000"
+          ],
+          "isMainRiskInsured": false,
+          "mainRiskInsuredCode": "CSX",
+          "sort": 92,
+          "id": 9
+        },
+        {
+          "code": "SSX",
+          "name": "发动机涉水损失险",
+          "shortName": "涉水险",
+          "description": "涉水险或称发动机特别损失险，各个保险公司叫法不一样但本质一致:车辆涉水险，这是一种新衍生的险种，均指车主为发动机购买的附加险。保险车辆在积水路面涉水行驶或被水淹后致使发动机损坏可给予赔偿。",
+          "extraRiskInsuredCode": true,
+          "optionCoverages": [],
+          "isMainRiskInsured": false,
+          "mainRiskInsuredCode": "CSX",
+          "sort": 91,
+          "id": 10
+        },
+        {
+          "code": "WFZDDSF",
+          "name": "无法找到第三方特约险",
+          "shortName": "第三方特约险",
+          "description": "按照车损险条款约定，“被保险机动车的损失应当由第三方负责赔偿，无法找到第三方的，实行30%的绝对免赔率”。如果发生上述情形，保险公司将从赔付金额中扣除30%。但如果车主在投保车损险的同时，投保了“机动车损失保险无法找到第三方特约险”，就可以在此附加险项下得到本应由自身承担的30%的赔付。",
+          "extraRiskInsuredCode":false,
+          "optionCoverages": [],
+          "isMainRiskInsured": false,
+          "mainRiskInsuredCode": "CSX",
+          "sort": 90,
+          "id": 19
+        },
+        {
+          "code": "FJXBJMP",
+          "name": "附加险不计免赔",
+          "shortName": "附加险不计免赔",
+          "description": "划痕险、自燃损失险、涉水险不计免赔总额（太平）。",
+          "extraRiskInsuredCode": false,
+          "optionCoverages": [],
+          "isMainRiskInsured": false,
+          "sort": 60,
+          "id": 20
+        }
+      ],
+      "id": 2
+    }
+  ],
+  "status": 200
+}

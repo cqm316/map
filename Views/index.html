@@ -1,0 +1,94 @@
+﻿<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>邦德兄弟联盟后台管理</title>
+		<meta name="renderer" content="webkit">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="format-detection" content="telephone=no">
+		<meta http-equiv="x-dns-prefetch-control" content="on">
+		<link rel="dns-prefetch" href="//host_name_to_prefetch.com">
+		<link rel="stylesheet" href="../plugins/layui/css/layui.css" media="all" />
+		<link rel="stylesheet" href="../Styles/main.css" media="all">
+	</head>
+
+	<body>
+		<div class="layui-layout layui-layout-admin">
+			<div class="layui-header header header-demo">
+				<div class="layui-main fn-clear">
+					<div class="admin-logo-box">
+						<a class="logo" href="index.html">
+							<img class="log-img" src="../images/bob_logo.png" alt="">
+							<span class="log-line">|</span>
+							<span class="log-title">车险后台管理系统</span>
+						</a>
+					</div>
+					<ul class="layui-nav admin-header-item fn-clear">
+						<li class="layui-nav-item">
+							<a href="javascript:;" class="admin-header-user">
+								<img class="head-img" src="../images/icon_user.png" />
+								<span class="user-info"><h3>系统管理员</h3><p>深圳分公司<span>-南山</span></p></span>
+							</a>
+						</li>
+						<li class="layui-nav-item h-line">|</li>
+						<li class="layui-nav-item"><a class="ico" href="javascript:;"><i class="ico-notice"></i></a></li>
+						<li class="layui-nav-item">
+							<a class="ico" href="javascript:;"><i class="ico-hover"></i></a>
+							<dl class="layui-nav-child">
+								<dd>
+									<a href="javascript:;"><i class="fa fa-user-circle" aria-hidden="true"></i> 个人信息</a>
+								</dd>
+								<dd>
+									<a href="javascript:;"><i class="fa fa-gear" aria-hidden="true"></i> 设置</a>
+								</dd>
+								<dd>
+									<a href="Login.html"><i class="fa fa-sign-out" aria-hidden="true"></i> 退出</a>
+								</dd>
+							</dl>
+						</li>
+					</ul>
+					<ul class="layui-nav admin-header-item-mobile">
+						<li class="layui-nav-item">
+							<a href="login.html"><i class="fa fa-sign-out" aria-hidden="true"></i>退出</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			
+			<div class="layui-side" id="admin-side">
+				<div class="layui-side-scroll" id="admin-navbar-side" lay-filter="side"></div>
+			</div>
+			<!-- 面板 -->
+			<div class="layui-body" id="admin-body">
+				<div class="layui-tab admin-nav-card layui-tab-brief" lay-filter="admin-tab">
+					<ul class="layui-tab-title">
+						<li class="layui-this" lay-id="1521795625048">
+							<cite>系统面板</cite>
+						</li>
+					</ul>
+					<div class="layui-tab-content">
+						<div class="layui-tab-item layui-show">
+							<iframe src="../map/Views/index.html"></iframe>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- footer -->
+			<div class="layui-footer footer footer-demo" id="admin-footer"></div>
+			<div class="site-tree-mobile layui-hide">
+				<i class="layui-icon">&#xe602;</i>
+			</div>
+			<div class="site-mobile-shade"></div>
+		</div>
+	</body>
+	<script type="text/javascript" src="../plugins/layui/layui.js"></script>
+	<script type="text/javascript" src="../plugins/layui/lay/dest/layui.all.js"></script>
+	<script type="text/javascript" src="../datas/nav.js"></script>
+	<script src="../Scripts/index.js"></script>
+	<script src="../Scripts/common.js"></script>
+</html>

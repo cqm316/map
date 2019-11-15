@@ -1,0 +1,104 @@
+{
+	"result": [{
+		"quoteStatus":{
+			"text": "Success",
+			"value": 1,
+			"display": "报价成功"
+		},
+		"insuranceCMPCode": "pingan",
+		"insCorp":{
+			"fullName":"中国平安保险（集团）股份有限公司",
+			"shortName":"中国平安",
+			"code":"pingan",
+			"orderBy":1,
+			"deleted":false,
+			"id":1
+		},
+		"bzBeginDate": "2017-11-01 00:00:00",
+		"bsBeginDate": "2017-11-01 00:00:00",
+		"bzEndDate": "2018-11-01 00:00:00",
+		"bsEndDate": "2018-11-01 00:00:00",
+		"premium": 2745.29,
+		"bzPremium": 665,
+		"bsPremium": 1360.29,
+		"totalTax": 720,
+		"tax": 720,
+		"preTax": 0,
+		"lateFeesOfTax": 0,
+		"coefficient":{
+			"wpkyhxs": 0,
+			"zzhbxs": 0,
+			"zzqdxs": 0,
+			"jtwffdxs": 0,
+			"zksx": 0,
+			"isRenewal": false
+		},
+		"insuredRiskKinds":[
+			{
+			"coverage": "1000000",
+			"riskKindItemCode": "SZX",
+			"riskKindItem":"第三者责任保险",
+			"premium": 1182.86,
+			"isDeductible": false
+			},
+			{
+			"coverage": "",
+			"riskKindItemCode": "BJMP",
+			"riskKindItem":"车上人员责任保险(乘客)",
+			"premium": 177.43,
+			"isDeductible": true
+			}
+		]
+	},
+	{
+		"quoteStatus":{
+			"text": "Success",
+			"value": 1,
+			"display": "报价成功"
+		},
+		"insCorp":{
+			"fullName":"中国太平洋保险有限公司",
+			"shortName":"太平洋保险",
+			"code":"cpic",
+			"orderBy":0,
+			"deleted":false,
+			"id":3
+		},
+		"bzBeginDate": "2017-11-01 00:00:00",
+		"bsBeginDate": "2017-11-01 00:00:00",
+		"bzEndDate": "2018-11-01 00:00:00",
+		"bsEndDate": "2018-11-01 00:00:00",
+		"premium": 2745.29,
+		"bzPremium": 665,
+		"bsPremium": 1360.29,
+		"totalTax": 720,
+		"tax": 720,
+		"preTax": 0,
+		"lateFeesOfTax": 0,
+		"coefficient":{
+			"wpkyhxs": 0,
+			"zzhbxs": 0,
+			"zzqdxs": 0,
+			"jtwffdxs": 0,
+			"zksx": 0,
+			"isRenewal": false
+		},
+		"insuredRiskKinds":[
+			{
+			"coverage": "1000000",
+			"riskKindItemCode": "SZX",
+			"riskKindItem":"第三者责任保险",
+			"premium": 1182.86,
+			"isDeductible": false
+			},
+			{
+			"coverage": "",
+			"riskKindItemCode": "BJMP",
+			"riskKindItem":"车上人员责任保险(乘客)",
+			"premium": 177.43,
+			"isDeductible": true
+			}
+		]
+	}],
+	"status":200
+}

@@ -1,0 +1,84 @@
+@charset "utf-8";
+article,aside,blockquote,body,button,code,dd,details,div,dl,dt,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,hr,input,legend,li,menu,nav,ol,p,pre,section,td,textarea,th,ul{margin:0;padding:0}
+input:-webkit-autofill,select:-webkit-autofill,textarea:-webkit-autofill{background-color:none!important;color:#333!important}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}
+body,button,input,select,textarea{font:14px/1.5 arial,"Microsoft YaHei"}
+html { background-color: #f7f7f7; }
+a:focus,a:hover{text-decoration:none}
+em,i{font-style:normal}
+.clear:after,.fn-clear:after{visibility:hidden;display:block;font-size:0;content:" ";clear:both;height:0}
+.clear,.fn-clear{zoom:1}
+.item-block{display:block}
+.admin-main{margin:15px}
+.admin-main .layui-field-title .layui-field-box{padding:10px 30px}
+.admin-main .layui-field-title .layui-field-box p{padding:5px 0}
+.fix-btn{width:100%;position:fixed;bottom:0;height:50px;background:#e0e0e0;text-align:center;padding-top:10px}
+.fn-left{float:left}
+.fn-right{float:right}
+.mt5{margin-top:5px}
+.mt10{margin-top:10px }
+.mt15{margin-top:15px}
+.mb20{margin-bottom:20px}
+.mr15 { margin-right: 15px; }
+.pt20{padding-top:20px}
+.font12 { font-size: 12px; }
+a.layui-btn:focus,a.layui-btn { color: #fff }
+.mast { color: red; }
+
+.layui-card-header em{color: #979797;}
+.map-statistics .filter-bar li { display: inline-block; font-size: 12px; color: #333; }
+.map-statistics .filter-bar .filter-item { margin-right: 24px; cursor: pointer; }
+.map-statistics .filter-bar .filter-item.cur { width: 56px; height: 30px; line-height: 30px; border-radius: 4px; text-align: center; color: #fff;background-color: #2150A3; }
+.map-statistics .posiStyle {position: relative;}
+.map-statistics .posi-right {position: absolute; right: 0;}
+.map-statistics .posi-left {position: absolute;left: 0;top: 70px;}
+
+.layui-row .map-box { position: absolute; left: 25%; }
+
+.grid-demo {text-align: center;}
+.grid-demo-side{box-shadow: 0 9px 19px -8px #CAE1FB;border-radius: 4px;background: #fff;padding:20px; margin-bottom: 15px;}
+.grid-demo-side > h3 { margin-bottom: 15px; text-align: left; font-size: 17px; color: #111; font-weight: 500; }
+
+.premium-list { height: 340px; padding-right: 10px; overflow-y: scroll; }
+.premium-list::-webkit-scrollbar {width: 5px; background-color: #fff; }
+.premium-list::-webkit-scrollbar-track {background: #fff; }
+.premium-list::-webkit-scrollbar-thumb {border-radius: 18px; background: #dee3ef; }
+.premium-list::-webkit-scrollbar-thumb:window-inactive {background: rgba(255,255,255,0.40); }
+.premium-list .layui-progress { height: 9px; overflow: hidden; background-color: #edf0f5; }
+.premium-list .layui-progress-bar { height: 9px; background-color: #bcc2de; }
+.premium-list li { margin-bottom: 8px; font-size: 10px; color: #333; }
+.premium-list li:nth-child(1) .layui-progress-bar {background-color: #f372ba; background:-webkit-linear-gradient(left, #f372ba, #f6a17d); background:-o-linear-gradient(left, #f372ba, #f6a17d); background:linear-gradient(to right, #f372ba, #f6a17d);}
+.premium-list li:nth-child(2) .layui-progress-bar { background-color: #578bf8; background:-webkit-linear-gradient(left, #578bf8, #46cadd); background:-o-linear-gradient(left, #578bf8, #46cadd); background:linear-gradient(to right, #578bf8, #46cadd);}
+.premium-list li:nth-child(3) .layui-progress-bar { background-color: #8466f8; background:-webkit-linear-gradient(left, #8466f8, #b5a7e7); background:-o-linear-gradient(left, #8466f8, #b5a7e7); background:linear-gradient(to right, #8466f8, #b5a7e7);}
+
+.chickenMap .map-area { padding-bottom: 30px; background-position: 50% 0, 50% 0; background-size: 30px 30px, 30px 30px; background-image: linear-gradient(#efefef,#f5f5f5 1px,transparent 1px,transparent 10px,#f5f5f5 10px,#f5f5f5 11px,transparent 11px,transparent 20px,#f6f6f8 20px,#f6f6f8 21px,transparent 21px),linear-gradient(90deg,#efefef,#efefef 1px,transparent 1px,transparent 10px,#f6f6f8 10px,#f6f6f8 11px,transparent 11px,transparent 20px,#f6f6f8 20px,#f6f6f8 21px,transparent 21px);}
+.chickenMap h2{position: relative; height:0;  width:72%; margin:0 auto; border-top:66px solid #fff; border-radius: 30px; border-left:66px solid transparent;  border-right:60px solid transparent; }
+.chickenMap h2 .chicken-box { content: ''; position: absolute; top: -65px; left: 0; width: 100%; height: 56px; padding-top: 10px;font-size: 12px;color: #808080; text-align: center; box-shadow: 0 9px 19px -8px rgba(202,225,251,0.50); }
+.chickenMap h2 b{font-size: 20px;color: #202020;}
+.chickenMap .statisticalAmount{width:100%;height:60px;padding-top: 30px;}
+.chickenMap .statisticalAmount li{width: 50%;float: left;text-align: center;}
+.chickenMap .statisticalAmount li em,.vehicleApproachData em,.vehicleProcessBar li em{display: block;font-size: 12px;color: #808080;}
+.chickenMap .statisticalAmount li b,.vehicleApproachData b{font-size: 1.8em;color: #202020;}
+.chickenMap .china-map {margin:0 auto;}
+.chickenMap .mapBase { width: 100%; position: relative; }
+.chickenMap .mapBase .base{margin: 0 auto; background: #fff; -moz-border-radius: 50%/55%; -webkit-border-radius: 50%/55%; border-radius: 50%/55%; box-shadow:0 10px 30px #bdd9ff; opacity: 0.61; }
+.chickenMap .mapBase .base.baseOne{height: 30px;width: 50%; position: relative; z-index: 1; }
+.chickenMap .mapBase .base.baseTwo{height: 50px;width: 72%; margin-top: -10px; }
+
+.vehicleApproachData{width: 80%;height:130px;background: #F9FAFC;border-radius: 4px;margin:0 auto;padding-top: 10px;}
+.vehicleApproachData i{display: block;width: 48px;height:48px;background:url(../Content/icon-car-dashboard-48.png) no-repeat;margin:5px auto 10px auto;}
+.vehicleProcessBar{padding:10px 0 0 0;}
+.vehicleProcessBar li{width: 33%;float: left;}
+.vehicleProcessBar li span{font-size: 24px;color: #202020;}
+.circleChart_text { color:#4ECFE5; font-size: 12px !important; font-family: 'Microsoft YaHei' !important; }
+
+.identification{position: absolute;width: 85px;left: 103px;top: -114px;} 
+.identification span{display: block;padding-left: 32px;position: relative;height:35px;line-height: 35px;}
+.identification i{position: absolute;width: 32px;height:32px;left:0;}
+.identification i.icon-1{background: url(../Content/icon-marker-group.png) no-repeat;}
+.identification i.icon-2{background: url(../Content/icon-marker-branch.png) no-repeat;}
+.identification i.icon-3{background: url(../Content/icon-marker-store.png) no-repeat;}
+@media screen and (max-width: 999px){
+	.layui-row .map-box { position: static; }
+	.fn-left .grid-demo { margin-right: 15px; }
+}

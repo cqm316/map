@@ -1,0 +1,17 @@
+{
+    "result": [
+        {
+        "id": 0,
+        "shortName": "中国平安",
+        "code": "pingan",
+        "orderBy": 0
+        },
+        {
+        "id": 0,
+        "shortName": "太平洋保险",
+        "code": "cpic",
+        "orderBy": 0
+        }
+    ],
+    "status": 200
+}

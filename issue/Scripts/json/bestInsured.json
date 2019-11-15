@@ -1,0 +1,63 @@
+{
+  "result": {
+    "bzBeginDate": "2017-10-31 00:00:00",
+      "bsBeginDate": "2017-11-08 00:00:00",
+      "bsRiskKindItems": [
+          {
+              "riskKindItemCode": "CSX",
+              "isDeductible": true,
+              "compensationLimits": "1375110",
+              "glassMadeInChina": false
+          },
+          {
+              "riskKindItemCode": "SZX",
+              "isDeductible": true,
+              "compensationLimits": "1000000",
+              "glassMadeInChina": false
+          },
+          {
+              "riskKindItemCode": "DQX",
+              "isDeductible": true,
+              "compensationLimits": "1059184",
+              "glassMadeInChina": false
+          },
+          {
+              "riskKindItemCode": "SJZRX",
+              "isDeductible": true,
+              "compensationLimits": "100000",
+              "glassMadeInChina": false
+          },
+          {
+              "riskKindItemCode": "CKZRX",
+              "isDeductible": true,
+              "compensationLimits": "150000",
+              "glassMadeInChina": false
+          },
+          {
+              "riskKindItemCode": "BLX",
+              "isDeductible": false,
+              "compensationLimits": "Import",
+              "glassMadeInChina": false
+          },
+          {
+              "riskKindItemCode": "ZRX",
+              "isDeductible": false,
+              "compensationLimits": "1059184",
+              "glassMadeInChina": false
+          },
+          {
+              "riskKindItemCode": "SSX",
+              "isDeductible": false,
+              "compensationLimits": "1375110",
+              "glassMadeInChina": false
+          },
+          {
+              "riskKindItemCode": "WFZDDSF",
+              "isDeductible": false,
+              "compensationLimits": "0",
+              "glassMadeInChina": false
+          }
+      ]
+  },
+  "status": 200
+}

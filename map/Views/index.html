@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="../layui/css/layui.css" media="all">
+	<link rel="stylesheet" href="../Styles/indexMap.css" media="all">
+</head>
+<body>
+<div class="layui-fluid layui-wrapper">
+    <div class="map-statistics mt10">
+		<!-- 头部 -->
+        <div class="layui-card-header wrapper-header">
+            <em  class="fn-left">统计时段：</em>
+            <ul class="filter-bar fn-left">
+                <li class="filter-item" data-bind="">今天</li>
+                <li class="filter-item cur" data-bind="">本周</li>
+                <li class="filter-item" data-bind="">本月</li>
+                <li class="filter-item" data-bind="">本年</li>
+            </ul>
+            <div class="layui-inline">
+		      	<div class="layui-input-inline">
+		        	<input type="text" class="layui-input" id="dateRange" placeholder="请选择日期范围">
+		      	</div>
+		    </div>
+            <p class="fn-right"><em>更新时段：</em><span>2018-08-08 00:00:00</span></p>
+        </div>
+		<!-- 内容 -->
+		<div class="layui-row posiStyle mt10">
+		    <div class="layui-col-md6 layui-col-xs12 layui-col-sm12 map-box">
+		      	<div class="grid-demo">
+		      		<div class="chickenMap">
+				        <h2>
+				        	<div class="chicken-box">
+				        		<p>当前位置</p>
+				        		<b id="ClickCallback">全国</b>
+				        	</div>
+				        </h2>
+				        <div class="map-area">
+				        	<ul class="statisticalAmount">
+					        	<li>
+					        		<em>出单总量</em>
+					        		<b>3234,456,00</b>
+					        	</li>
+					        	<li>
+					        		<em>总保费</em>
+					        		<b>3234,456,00</b>
+					        	</li>
+					        </ul>
+				            <div class="itemCon">
+				            	<div id="main" style="width: 90%;height:600px; margin: 0 auto; "></div>
+				            	<div class="mapBase">
+				            		<div class="identification">
+				            			<span><i class="icon-1"></i>总公司</span>
+				            			<span><i class="icon-2"></i>分公司</span>
+				            			<span><i class="icon-3"></i>网点</span>
+				            		</div>
+				            		<div class="baseOne base"></div>
+				            		<div class="baseTwo base"></div>
+				            	</div>
+					        </div>
+				        </div>
+				    </div>
+		      	</div>
+		    </div>
+		    <div class="layui-col-md3 layui-col-xs6 layui-col-sm6 fn-left">
+		      	<div class="grid-demo">
+		      		<div id="barChart" class="grid-demo-side" style="height: 380px"></div>
+		      		<div class="grid-demo-side" >
+		      			<h3>保险公司出单业务比例</h3>
+                		<div id="pieChart" style="height: 340px"></div>
+		      		</div>
+		      	</div>
+		    </div>
+		    <div class="layui-col-md3 layui-col-xs6 layui-col-sm6 fn-right">
+		      	<div class="grid-demo">
+		      		<div class="grid-demo-side">
+		      			<h3>出单业务排行榜(按总保费)TOP10</h3>
+		      			<ul class="premium-list" data-bind="foreach: premiumArr">
+		      				<li>
+			      				<p class="fn-clear"><em class="fn-left" data-bind="text: orgName"></em><span class="fn-right" data-bind="text: '￥'+ premium"></span></p>
+			      				<div data-bind="html: html"></div>
+			      			</li>
+		      			</ul>
+		      		</div>
+					<div class="grid-demo-side">
+		                <h3 class="mb20">车辆进场监控数据</h3>
+		                <div class="vehicleApproachData">
+		                	<i></i>
+		                	<em>总进场车辆数</em>
+		                	<b>520</b>
+		                </div>
+		                <div id="" style="height: 200px">
+		                	<ul class="vehicleProcessBar">
+		                		<li>
+		                			<em>可续保车辆数</em>
+		                			<span>345</span>
+		                			<div class="circleChart" data-value="23"></div>
+		                		</li>
+		                		<li>
+		                			<em>已报价车辆数</em>
+		                			<span>145</span>
+		                			<div class="circleChart" data-value="45"></div>
+		                		</li>
+		                		<li>
+		                			<em>已出单车辆数</em>
+		                			<span>45</span>
+		                			<div class="circleChart" data-value="56"></div>
+		                		</li>
+		                	</ul>
+		                </div>
+		            </div>
+		      	</div>
+		    </div>
+		</div>
+    </div>
+</div> 
+	
+<script src="../layui/layui.js" charset="utf-8"></script>
+<script src="../Scripts/jquery.min.js" charset="utf-8"></script>
+<script src="../Scripts/circleChart.min.js"></script>
+<script type="text/javascript" src="../../Scripts/knockout.js"></script>
+<script src="../Scripts/echarts.min.js" charset="utf-8"></script>
+
+<!-- [[ API返回数据 -->
+<script src="../Scripts/getJson.js" charset="utf-8"></script>
+<!-- API返回数据 ]]-->
+
+<!-- [[ 全国地图 -->
+<script type="text/javascript" src="../Scripts/chinaMapConfig.js"></script>
+<script type="text/javascript" src="../Scripts/map.js"></script>
+<script type="text/javascript" src="../Scripts/citymap.js"></script>
+<!--  全国地图 ]]-->
+
+<script src="../Scripts/mapStatistics.js" charset="utf-8"></script>
+</body>
+</html>

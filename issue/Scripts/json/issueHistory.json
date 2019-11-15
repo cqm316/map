@@ -1,0 +1,96 @@
+{
+    "result": {
+        "car": {
+            "plateNo": "粤B88888",
+            "carOwnerName": "冉辉",
+            "carOwnerIDNo": "341204198010080414",
+            "carOwnerType": "Other",
+            "vin": "WP0BA2975GL016690",
+            "engineNo": "CWF018244",
+            "model": "帕纳美拉PANAMERA 3.0T轿跑车",
+            "makerModel": "BSI1153BSJ",
+            "purchasePrice": 1351000,
+            "analogyCarPrice": 1351000,
+            "year": 2014,
+            "passengerCapacity": 4,
+            "registerDate": "2016-08-05 00:00:00",
+            "remark": "双离合 长轴距版 EXECUTIVE 双涡轮增压",
+            "exhaustMeasure": 0,
+            "changedOwner": false,
+            "fullPriceModel": "BSI1153BSJ/帕纳美拉PANAMERA 3.0T轿跑车/4座/双离合 长轴距版 EXECUTIVE 双涡轮增压/2014/1351000"
+        },
+        "applicant": {
+            "name": "冉辉",
+            "phone": "13569874596",
+            "idNo": "341204198010080414",
+            "type": "Person"
+        },
+        "insured": {
+            "name": "冉辉",
+            "phone": "13569874596",
+            "idNo": "341204198010080414",
+            "type": "Person"
+        },
+        "riskKindSelected": {
+            "bzBeginDate": "2017-10-31 00:00:00",
+            "bsBeginDate": "2017-11-08 00:00:00",
+            "bsRiskKindItems": [
+                {
+                    "riskKindItemCode": "CSX",
+                    "isDeductible": true,
+                    "compensationLimits": "1375110",
+                    "glassMadeInChina": false
+                },
+                {
+                    "riskKindItemCode": "SZX",
+                    "isDeductible": false,
+                    "compensationLimits": "1000000",
+                    "glassMadeInChina": false
+                },
+                {
+                    "riskKindItemCode": "DQX",
+                    "isDeductible": true,
+                    "compensationLimits": "1059184",
+                    "glassMadeInChina": false
+                },
+                {
+                    "riskKindItemCode": "SJZRX",
+                    "isDeductible": false,
+                    "compensationLimits": "100000",
+                    "glassMadeInChina": false
+                },
+                {
+                    "riskKindItemCode": "CKZRX",
+                    "isDeductible": false,
+                    "compensationLimits": "150000",
+                    "glassMadeInChina": false
+                },
+                {
+                    "riskKindItemCode": "BLX",
+                    "isDeductible": false,
+                    "compensationLimits": "Import",
+                    "glassMadeInChina": false
+                },
+                {
+                    "riskKindItemCode": "ZRX",
+                    "isDeductible": false,
+                    "compensationLimits": "1059184",
+                    "glassMadeInChina": false
+                },
+                {
+                    "riskKindItemCode": "SSX",
+                    "isDeductible": false,
+                    "compensationLimits": "1375110",
+                    "glassMadeInChina": false
+                },
+                {
+                    "riskKindItemCode": "WFZDDSF",
+                    "isDeductible": false,
+                    "compensationLimits": "0",
+                    "glassMadeInChina": false
+                }
+            ]
+        }
+    },
+    "status": 200
+}

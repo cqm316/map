@@ -1,0 +1,12 @@
+{
+    "result": {
+        "id": 1,
+        "contactInfo": {
+            "contact": "冉辉",
+            "phone1": "13569874596",
+            "phone2": "13569874888",
+            "email": ""
+        }
+    },
+    "status": 200
+}

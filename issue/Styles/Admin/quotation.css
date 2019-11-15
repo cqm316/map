@@ -1,0 +1,142 @@
+@charset "utf-8";
+.mod-quota-head .customer-area { height: 100px; overflow-y: scroll; }
+.mod-quota-head .quot-customer .layui-form-item { float: left; clear: none; }
+.mod-quota-head .layui-form-label { width: 60px; text-align: left; }
+
+.quota-main { margin: 15px; padding: 0 5px; }
+.quota-main .layui-tab-title { text-align: center; border: none; }
+.quota-main .tab-index { margin-bottom: 25px; }
+.quota-main .layui-tab-brief>.layui-tab-more li.layui-this:after,
+.quota-main .layui-tab-brief>.layui-tab-title .layui-this:after,
+.quota-main .layui-tab-title .layui-this:after { border: none; border-bottom: none; }
+.quota-main .layui-tab-title li { display: inline-block; color: #6D7487; }
+.quot-title { width: 300px; padding: 0 0 15px 15px; font-size: 12px; color: #B2B9CC; }
+.quot-title.ins-title { padding-bottom: 0; }
+.quota-main .seatsCount { text-align: left; }
+.quota-main .layui-input.uppercase { text-transform: uppercase; }
+.quota-main .layui-frist { padding-right: 20px; border-right: 1px solid #666; }
+.quota-main .layui-tab-content { padding: 30px 10px; }
+.quota-form .layui-form-item { text-align: center; color: #6D7487; }
+.quota-form .layui-form-item .layui-inline { width: 380px; text-align: left; }
+.quota-form .layui-form-item .layui-form-label { text-align: left; }
+.quota-main .layui-form-item .layui-form-label.lab { width: 500px; text-align: left; }
+.quota-form .layui-form-item.lay-district .layui-input-inline { width: 120px; }
+.quota-form .layui-form-item .layui-input-inline { width: 250px; }
+.quota-form .btn-area { display: inline-block; width: 274px; text-align: left; padding-left: 86px; }
+.quota-main .btn-footer { position: fixed; width: 100%; padding: 10px 5px; bottom: -6px; left: 0; z-index: 7; line-height: 38px; border-top: 1px solid #D9DDE7; text-align: center; background: #F8FAFD; border-bottom: 1px solid #e0e0e0; }
+.layui-icon { font-size: 30px; color: #666; }
+.quota-main .dat-text { display: inline-block; padding: 5px 0; }
+.quota-main .layui-textarea { min-height: 38px; }
+.quota-main .mod-ownerVehicle .layui-form-label { width: 70px; text-align: left; }
+.quota-main .quotAdmin { padding-bottom: 320px; }
+.quota-main .quot-inner { padding: 0 5px; }
+.quota-main .model-show .layui-btn { margin-top: 15px; }
+.quota-main .validationMessage { margin-top: 10px; font-size: 12px; color: #ec4e82; }
+.quota-main .item-custom-width{width: 244px}
+.quota-main .label-custom-width{width: 200px;}
+.quota-main .mod-info { padding-left: 30px; }
+.layui-layer-shade { background-color: #0e2d65 !important; opacity: 0.1 !important; }
+
+.seat-area { padding: 15px 4%; }
+.seat-area .box-tip { margin-bottom: 20px; color: #ec4e82; font-size: 12px; }
+.seat-area .layui-btn { margin: 0 15px 10px 0; background-color: #2150A3; }
+.seat-area .layui-btn.layui-btn-primary { background: none; }
+.seat-area .layui-btn.layui-btn-primary:hover { border-color: #2150A3; }
+
+.model-area .layui-table { margin: 10px auto; width: 96%; }
+
+.com-insurances-list .layui-form-select .layui-input { cursor: text; }
+
+.quota-main .layui-form-item .plateNo-area .layui-form-checkbox[lay-skin=primary] { margin-top: 0; }
+.quota-main .layui-form-item .ipt-plateNo { display: inline-block; width: 92px; margin-right: 8px; }
+
+/*选择车险方案*/
+.quota-hd { margin-bottom: 16px; }
+.quota-hd > em { float: left; font-size: 16px; color: #6D7487; }
+.quota-hd > span { margin-left: 16px; line-height: 28px; font-size: 12px; color: #F5A623; }
+.quota-hd .btn-detail { float: right; height: 28px; padding: 0 16px; line-height: 28px; color: #2150A3; text-align: center; font-size: 12px; border-radius: 4px; border: 1px solid #D9DDE7; border-radius: 4px; }
+.quota-hd .btn-detail:hover { opacity: .8; }
+
+.insurance .layui-table[lay-skin=line], .layui-table[lay-skin=row] { border: none; }
+.insurance .layui-table thead tr { background: none; }
+.insurance .layui-table[lay-skin=line] td,
+.insurance .layui-table[lay-skin=line] th { border-color: #D9DDE7; color: #B2B9CC; }
+.insurance .layui-form-checkbox[lay-skin=primary] span { color: #18243A; }
+
+/* 添加保险公司 */
+.box-insurance-company { padding: 10px 20px; overflow: hidden; background: #fff; }
+.box-insurance-company h3 { font-size: 14px; padding: 5px 10px; cursor: pointer;}
+.box-insurance-company ul{ padding:20px; }
+.box-insurance-company li{ float:left; width: 90px; margin-right: 30px; text-align: center;}
+.box-insurance-company li .ico-company{ float: none; margin:0 auto; display: block;}
+.box-insurance-company .btn-area { position: absolute; bottom: 20px; width: 94%; text-align: center; }
+
+/*报价结果*/
+.quotation-result { padding-bottom: 100px;}
+.quotation-result .result-bar { padding: 18px; margin: 20px 0; line-height: 20px; border-radius: 4px; background-color: #F7F9FB; color: color: #6D7487; font-size: 14px; }
+.quotation-result .result-bar a { margin-left: 10px; color: color: #2150A3;; }
+.quotation-result .result-title { font-size: 14px; color: #B2B9CC; }
+.quotation-result .result-field { color: #6D7487; }
+.quotation-result .tab-title-custom { min-height: 80px;}
+.quotation-result .layui-tab-card > .tab-title-custom { background: #fff;}
+.quotation-result .layui-tab-card > .layui-tab-title li{ position: relative; width: 150px; height: 48px; padding: 10px; border: 1px solid #dadee8; border-radius: 4px; margin-right: 10px; vertical-align: top;}
+.quotation-result .tab-title-custom dd { float: left; text-align: left; line-height: 20px; }
+.quotation-result .tab-title-custom dd em { display: block; font-size: 14px; color: #6D7487; }
+.quotation-result .tab-title-custom dd span { color: #2150A3; }
+.quotation-result .tab-title-custom dd u { color: #B2B9CC; text-decoration:line-through; }
+.quotation-result .tab-title-custom dd .ico-status { position: absolute; right: 12px; top: -1px; width: 24px; height: 26px; background: url(../../Content/icon_prompt.png) no-repeat; }
+.quotation-result .tab-title-custom dd .ico-status.suc { background-position: 0 -44px; }
+
+.quotation-result .loading-result { padding-left: 40px; line-height: 22px; color: #6D7487; }
+.quotation-result .loading-result img { margin-right: 6px; }
+.quotation-result .fail-result { padding: 12px 16px; margin: 20px 2%; border-radius: 4px; background-color: #FBFAED; line-height: 20px; color: #6D7487; }
+.quotation-result .fail-result h3 { margin-bottom: 10px; color: #B2B9CC; }
+.quotation-result .quota-hd { margin-bottom: 2px; }
+.quotation-result .layui-elem-quote { margin-bottom: 26px; padding: 5px 12px; border: 1px solid #D9DDE7; border-radius: 4px; }
+.quotation-result .layui-table td,
+.quotation-result .layui-table th { border: none; border-bottom: 1px solid #D9DDE7; color: #5D657A; }
+.quotation-result .layui-table th { border-top: 1px solid #D9DDE7; color: #6D7487; font-weight: 400; }
+.quotation-result .layui-table .d-head td { color: #18243A; }
+.quotation-result .layui-table thead tr { background-color: #F5F7F9; }
+.quotation-result .layui-tab-content .layui-tab-item { padding-top: 20px; }
+
+/* tab切换 */
+.quotation-result .layui-tab-title,
+.quotation-result .layui-tab-brief>.layui-tab-title .layui-this:after { border-bottom: none; }
+.quotation-result .layui-tab-card { box-shadow: none; border: none; }
+.quotation-result .layui-tab-content { border: 1px solid #D9DDE7; border-radius: 4px; }
+.quotation-result .tab-title-custom li i.i-add { display:block;width:40px;height:40px;background: url(../../Content/icon-tianjia@x.png) no-repeat;margin:5px auto;}
+.quotation-result .tab-title-custom li i.i-loading { float:left; width: 20px; height: 20px; margin: 2px 6px 0 0; background: url(../../Content/a-loading.gif) no-repeat;  }
+.quotation-result .tab-title-custom li i.i-fail,
+.quotation-result .fail-result .i-fail { float:left; width: 20px; height: 20px; margin: 2px 6px 0 0; background: url(../../Content/icon_prompt.png) no-repeat 0 -90px; }
+.quotation-result .layui-tab-card > .layui-tab-title li.layui-this{ position: relative; left: 1px; padding-bottom: 20px; bottom: -2px; border-bottom:2px solid #fff;}
+.quotation-result.quota-main .layui-tab-title { text-align: left; }
+.quotation-result .layui-tab[overflow]>.layui-tab-title { overflow: auto; }
+
+/*去核保弹层*/
+.insure-layer { padding: 30px; }
+.insure-layer .tax-tip { padding: 0 10px; margin-bottom: 3px; color: #B2B9CC; }
+.insure-layer .form-area { margin-top: 25px; }
+.insure-layer .layui-form-label { text-align: left; }
+.insure-layer .layui-form-label.large { width: 200px; }
+.insure-layer .layui-input-block { width: 330px; margin-left: 100px; }
+.insure-layer .layui-form-item .layui-input-inline { width: 330px; line-height: 30px; }
+.insure-layer .btn-area { padding: 40px 0 0 100px; }
+.insure-layer .layui-form-select .layui-input { cursor: text; }
+
+/*创建订单*/
+.pay-order .quot-title { padding-left: 0; }
+.pay-order .layui-form-item .layui-form-label { padding: 5px 10px 5px 0; text-align: left; }
+.pay-order .pay-man { padding-bottom: 12px; margin-bottom: 30px; border-bottom: 1px solid #D9DDE7; }
+.pay-order .pay-man .layui-form-label { width: 60px; }
+.pay-order .pay-man .layui-input-inline { margin-right: 32px; }
+.pay-order .order-bar { margin: 12px 0; padding-bottom: 10px; border-bottom: 1px solid #D9DDE7; }
+.pay-order .order-status { margin-right: 200px; }
+.pay-order .order-status em { color: #009933; }
+.pay-order .order-sum em { color: #FF0000 }
+
+.pay-order .pay-method li { float: left; position: relative; width: 186px; height: 58px; margin: 0 20px 20px 0; cursor: pointer; line-height: 58px; text-align: center; font-size: 16px; color: #6D7487; background-color: #FFF; border: 1px solid #D9DDE7; }
+.pay-order .pay-method .ico-pay { display: inline-block; position: relative; top: 12px; width: 34px; height: 34px; margin-right: 10px; background-color: #eee; }
+.pay-order .pay-method li:hover,
+.pay-order .pay-method li.cur { border-color: #2150A3; }
+.pay-order .pay-method li.cur:after { position: absolute; top: 0; right: 0; content: ''; display: block; width: 30px; height: 30px; background-color: #2150A3; }

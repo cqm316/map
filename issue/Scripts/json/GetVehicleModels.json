@@ -1,0 +1,41 @@
+{
+  "result": [
+    {
+      "brandName": "",
+      "model": "帕纳美拉PANAMERA 3.0T轿跑车",
+      "makerModel": "BSI1193BSJ",
+      "purchasePrice": 1078000,
+      "year": 2016,
+      "remark": "双离合 涡轮增压",
+      "exhaustScale": 2.995,
+      "passengerCapacity": 4,
+      "analogyCarPrice": 1078000,
+      "fullPriceModel": "BSI1153BSJ/帕纳美拉PANAMERA 3.0T轿跑车/4座/双离合 长轴距版 EXECUTIVE 双涡轮增压/2014/1351000"
+    },
+    {
+      "brandName": "",
+      "model": "帕纳美拉PANAMERA 3.0T轿跑车",
+      "makerModel": "BSI1136BSJ",
+      "purchasePrice": 1145000,
+      "year": 2013,
+      "remark": "双离合 双涡轮增压",
+      "exhaustScale": 2.997,
+      "passengerCapacity": 4,
+      "analogyCarPrice": 1145000,
+      "fullPriceModel": "BSI1153BSJ/帕纳美拉PANAMERA 3.0T轿跑车/4座/双离合 长轴距版 EXECUTIVE 双涡轮增压/2014/1351000"
+    },
+    {
+      "brandName": "",
+      "model": "帕纳美拉PANAMERA 3.0T轿跑车",
+      "makerModel": "BSI1169BSJ",
+      "purchasePrice": 1201000,
+      "year": 2015,
+      "remark": "双离合 EDITION 双涡轮增压",
+      "exhaustScale": 2.997,
+      "passengerCapacity": 4,
+      "analogyCarPrice": 1201000,
+      "fullPriceModel": "BSI1153BSJ/帕纳美拉PANAMERA 3.0T轿跑车/4座/双离合 长轴距版 EXECUTIVE 双涡轮增压/2014/1351000"
+    }
+  ],
+  "status": 200
+}
